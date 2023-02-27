@@ -1,5 +1,7 @@
 # Sons-Of-The-Forest-CheatMenu
 
+This mod adds a Cheat-Menu to Sons of the Forest.
+
 With this mod you can activate God-Mode to disable damage and have unlimited stamina. Furthermore you can increase your player speed and get all items of the game with one click.
 
 ## Mod-Loader
