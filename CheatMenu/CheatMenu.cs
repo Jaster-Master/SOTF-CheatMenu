@@ -1,4 +1,5 @@
 ﻿using Il2Cpp;
+using Il2CppSons.Ai.Vail;
 using Il2CppSons.Gui;
 using Il2CppSons.Input;
 using Il2CppSons.Items.Core;
@@ -13,6 +14,7 @@ namespace CheatMenu;
 public class CheatMenu : MelonMod
 {
     private static readonly List<FirstPersonCharacter> Persons = new();
+    private static readonly List<VailActor> VailActors = new();
     private static readonly List<PlayerInventory> Inventories = new();
     private static readonly List<PauseMenu> PauseMenus = new();
     private static readonly List<DebugConsole> DebugConsoles = new();
@@ -33,6 +35,7 @@ public class CheatMenu : MelonMod
         ReadInventories();
         ReadDebugConsoles();
         ReadMouseRotators();
+        ReadVailActors();
     }
 
     public override void OnLateUpdate()
@@ -47,6 +50,11 @@ public class CheatMenu : MelonMod
                 {
                     mouseRotator.lockRotation = true;
                 }
+
+                foreach (var person in Persons)
+                {
+                    person._movementLocked = true;
+                }
             }
             else
             {
@@ -54,6 +62,11 @@ public class CheatMenu : MelonMod
                 foreach (var mouseRotator in MouseRotators)
                 {
                     mouseRotator.lockRotation = false;
+                }
+
+                foreach (var person in Persons)
+                {
+                    person._movementLocked = false;
                 }
             }
         }
@@ -122,6 +135,11 @@ public class CheatMenu : MelonMod
     private static void ReadMouseRotators()
     {
         MouseRotators.AddRange(Resources.FindObjectsOfTypeAll<SimpleMouseRotator>());
+    }
+
+    private static void ReadVailActors()
+    {
+        VailActors.AddRange(Resources.FindObjectsOfTypeAll<VailActor>());
     }
 
     private static void ShowMenu()
