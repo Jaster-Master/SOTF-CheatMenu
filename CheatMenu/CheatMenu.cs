@@ -7,28 +7,33 @@ using Il2CppTheForest;
 using Il2CppTheForest.Items.Inventory;
 using MelonLoader;
 using UnityEngine;
-using Types = Il2CppSons.Items.Core.Types;
 
 namespace CheatMenu;
 
 public class CheatMenu : MelonMod
 {
-    private static readonly List<FirstPersonCharacter> Persons = new();
-    private static readonly List<VailActor> VailActors = new();
-    private static readonly List<PlayerInventory> Inventories = new();
-    private static readonly List<PauseMenu> PauseMenus = new();
-    private static readonly List<DebugConsole> DebugConsoles = new();
-    private static readonly List<SimpleMouseRotator> MouseRotators = new();
+    private static readonly HashSet<FirstPersonCharacter> Persons = new();
+    private static readonly HashSet<VailActor> VailActors = new();
+    private static readonly HashSet<PlayerInventory> Inventories = new();
+    private static readonly HashSet<PauseMenu> PauseMenus = new();
+    private static readonly HashSet<DebugConsole> DebugConsoles = new();
+    private static readonly HashSet<SimpleMouseRotator> MouseRotators = new();
     public static bool IsShown;
     public static bool IsGodModeEnabled;
+    public static bool IsInstantChopTreeEnabled;
     private static bool _isFlyModeEnabled;
     private static bool _isDebugConsoleEnabled;
-    private static bool _isInstantKillEnabled;
+    public static bool IsInstantKillEnabled;
     private static float _speedMultiplier = 1;
     private static bool _isAllItemsButtonPressed;
     private static bool _isResetButtonPressed;
 
     public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+    {
+        ReadData();
+    }
+
+    private static void ReadData()
     {
         ReadPauseMenu();
         ReadPersons();
@@ -50,11 +55,6 @@ public class CheatMenu : MelonMod
                 {
                     mouseRotator.lockRotation = true;
                 }
-
-                foreach (var person in Persons)
-                {
-                    person._movementLocked = true;
-                }
             }
             else
             {
@@ -62,11 +62,6 @@ public class CheatMenu : MelonMod
                 foreach (var mouseRotator in MouseRotators)
                 {
                     mouseRotator.lockRotation = false;
-                }
-
-                foreach (var person in Persons)
-                {
-                    person._movementLocked = false;
                 }
             }
         }
@@ -87,14 +82,21 @@ public class CheatMenu : MelonMod
 
     private static void ReadPauseMenu()
     {
-        PauseMenus.AddRange(Resources.FindObjectsOfTypeAll<PauseMenu>());
+        foreach (var pauseMenu in Resources.FindObjectsOfTypeAll<PauseMenu>())
+        {
+            PauseMenus.Add(pauseMenu);
+        }
     }
 
     private static void ReadPersons()
     {
-        Persons.AddRange(Resources.FindObjectsOfTypeAll<FirstPersonCharacter>());
-        var person = Persons.FirstOrDefault();
-        ReadDefaultPersonValues(person);
+        foreach (var person in Resources.FindObjectsOfTypeAll<FirstPersonCharacter>())
+        {
+            Persons.Add(person);
+        }
+
+        var firstPerson = Persons.FirstOrDefault();
+        ReadDefaultPersonValues(firstPerson);
     }
 
     private static void ReadDefaultPersonValues(FirstPersonCharacter? person)
@@ -124,22 +126,34 @@ public class CheatMenu : MelonMod
 
     private static void ReadInventories()
     {
-        Inventories.AddRange(Resources.FindObjectsOfTypeAll<PlayerInventory>());
+        foreach (var inventory in Resources.FindObjectsOfTypeAll<PlayerInventory>())
+        {
+            Inventories.Add(inventory);
+        }
     }
 
     private static void ReadDebugConsoles()
     {
-        DebugConsoles.AddRange(Resources.FindObjectsOfTypeAll<DebugConsole>());
+        foreach (var debugConsole in Resources.FindObjectsOfTypeAll<DebugConsole>())
+        {
+            DebugConsoles.Add(debugConsole);
+        }
     }
 
     private static void ReadMouseRotators()
     {
-        MouseRotators.AddRange(Resources.FindObjectsOfTypeAll<SimpleMouseRotator>());
+        foreach (var mouseRotator in Resources.FindObjectsOfTypeAll<SimpleMouseRotator>())
+        {
+            MouseRotators.Add(mouseRotator);
+        }
     }
 
     private static void ReadVailActors()
     {
-        VailActors.AddRange(Resources.FindObjectsOfTypeAll<VailActor>());
+        foreach (var vailActor in Resources.FindObjectsOfTypeAll<VailActor>())
+        {
+            VailActors.Add(vailActor);
+        }
     }
 
     private static void ShowMenu()
@@ -152,14 +166,17 @@ public class CheatMenu : MelonMod
 
         _isDebugConsoleEnabled = GUI.Toggle(new Rect(30, 140, 280, 40), _isDebugConsoleEnabled, "Debug-Console");
 
-        _isInstantKillEnabled = GUI.Toggle(new Rect(30, 180, 280, 40), _isInstantKillEnabled, "Instant-Kill");
+        IsInstantKillEnabled = GUI.Toggle(new Rect(30, 180, 280, 40), IsInstantKillEnabled, "Instant-Kill");
 
-        GUI.Label(new Rect(30, 220, 280, 40), "Speed-Multiplier:");
-        _speedMultiplier = GUI.HorizontalSlider(new Rect(30, 260, 280, 40), _speedMultiplier, 0, 100);
+        IsInstantChopTreeEnabled =
+            GUI.Toggle(new Rect(30, 220, 280, 40), IsInstantChopTreeEnabled, "Instant chop tree");
 
-        _isAllItemsButtonPressed = GUI.Button(new Rect(30, 300, 280, 40), "Get all items");
+        GUI.Label(new Rect(30, 260, 280, 40), "Speed-Multiplier:");
+        _speedMultiplier = GUI.HorizontalSlider(new Rect(30, 300, 280, 40), _speedMultiplier, 0, 100);
 
-        _isResetButtonPressed = GUI.Button(new Rect(30, 340, 280, 40), "Reset all values");
+        _isAllItemsButtonPressed = GUI.Button(new Rect(30, 340, 280, 40), "Get all items");
+
+        _isResetButtonPressed = GUI.Button(new Rect(30, 380, 280, 40), "Reset all values");
         if (!GUI.changed) return;
         ApplyGodMode();
         ApplySpeed();
@@ -238,8 +255,6 @@ public class CheatMenu : MelonMod
 
         foreach (var person in Persons)
         {
-            // LocalPlayer = lokaler Spieler?
-            // PlayerBase = idk?
             if (person._rigidbody == null) continue;
             person._rigidbody.useGravity = !_isFlyModeEnabled;
             person.gravity = _isFlyModeEnabled ? 0 : DefaultValues.DefaultGravity;
@@ -251,9 +266,7 @@ public class CheatMenu : MelonMod
     {
         foreach (var debugConsole in DebugConsoles)
         {
-            debugConsole.useGUILayout = _isDebugConsoleEnabled;
-            debugConsole._showOverlay = _isDebugConsoleEnabled;
-            debugConsole._showConsole = _isDebugConsoleEnabled;
+            // TODO: open debug console
         }
     }
 
@@ -273,7 +286,7 @@ public class CheatMenu : MelonMod
                 if (item._editorName.ToLower().Contains("emergency")) continue;
                 try
                 {
-                    inventory.AddItem(item._id, 99, true);
+                    inventory.AddItem(item._id, int.MaxValue, true);
                 }
                 catch (Exception)
                 {
@@ -295,7 +308,8 @@ public class CheatMenu : MelonMod
         IsGodModeEnabled = false;
         _isFlyModeEnabled = false;
         _isDebugConsoleEnabled = false;
-        _isInstantKillEnabled = false;
+        IsInstantKillEnabled = false;
+        IsInstantChopTreeEnabled = false;
         ApplyGodMode();
         ApplySpeed();
         ApplyFlyMode();

@@ -6,7 +6,7 @@ With this mod you can activate God-Mode to disable damage and have unlimited sta
 
 ## Mod-Loader
 
-This mod was tested with MelonLoader v0.6.0 ALPHA Pre-Release:
+This mod was tested with MelonLoader v0.6.0 ALPHA Pre-Release in Singleplayer:
 https://melonwiki.xyz
 
 ## Usage
