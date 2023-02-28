@@ -48,27 +48,32 @@ public class CheatMenu : MelonMod
         if (Input.GetKeyUp(KeyCode.F10))
         {
             IsShown = !IsShown;
-            if (IsShown)
-            {
-                InputSystem.Cursor.Enable(true);
-                foreach (var mouseRotator in MouseRotators)
-                {
-                    mouseRotator.lockRotation = true;
-                }
-            }
-            else
-            {
-                InputSystem.Cursor.Enable(false);
-                foreach (var mouseRotator in MouseRotators)
-                {
-                    mouseRotator.lockRotation = false;
-                }
-            }
+            LockCursor();
         }
 
         if (!IsShown)
         {
             ApplyFlyMode();
+        }
+    }
+
+    private static void LockCursor()
+    {
+        if (IsShown)
+        {
+            InputSystem.Cursor.Enable(true);
+            foreach (var mouseRotator in MouseRotators)
+            {
+                mouseRotator.lockRotation = true;
+            }
+        }
+        else
+        {
+            InputSystem.Cursor.Enable(false);
+            foreach (var mouseRotator in MouseRotators)
+            {
+                mouseRotator.lockRotation = false;
+            }
         }
     }
 
@@ -242,15 +247,18 @@ public class CheatMenu : MelonMod
 
     private static void ApplyFlyMode()
     {
-        var move = new Vector2();
-        if (Input.GetKey(KeyCode.Space))
+        float yMove = 0;
+        if (_isFlyModeEnabled)
         {
-            move.y = 10;
-        }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                yMove = 0.1f;
+            }
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            move.y = -10;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                yMove = -0.1f;
+            }
         }
 
         foreach (var person in Persons)
@@ -258,7 +266,8 @@ public class CheatMenu : MelonMod
             if (person._rigidbody == null) continue;
             person._rigidbody.useGravity = !_isFlyModeEnabled;
             person.gravity = _isFlyModeEnabled ? 0 : DefaultValues.DefaultGravity;
-            person._rigidbody.AddForce(move, ForceMode.Force);
+            var personPosition = person.transform.position;
+            person._rigidbody.MovePosition(new Vector3(personPosition.x, personPosition.y + yMove, personPosition.z));
         }
     }
 
@@ -266,8 +275,10 @@ public class CheatMenu : MelonMod
     {
         foreach (var debugConsole in DebugConsoles)
         {
-            // TODO: open debug console
+            debugConsole.ShowConsole(_isDebugConsoleEnabled);
         }
+
+        LockCursor();
     }
 
     private static void CheckGetAllItemsButton()
