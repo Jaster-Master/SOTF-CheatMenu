@@ -20,4 +20,5 @@ public class DefaultValues
     public static float DefaultBaseRested = 0;
     public static float DefaultBaseTemperatur = 0;
     public static float DefaultGravity = 0;
+    public static float DefaultJumpMultiplier = 0;
 }

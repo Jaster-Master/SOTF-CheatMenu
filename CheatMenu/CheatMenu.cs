@@ -13,18 +13,15 @@ namespace CheatMenu;
 public class CheatMenu : MelonMod
 {
     private static readonly HashSet<FirstPersonCharacter> Persons = new();
-    private static readonly HashSet<VailActor> VailActors = new();
     private static readonly HashSet<PlayerInventory> Inventories = new();
-    private static readonly HashSet<PauseMenu> PauseMenus = new();
-    private static readonly HashSet<DebugConsole> DebugConsoles = new();
     private static readonly HashSet<SimpleMouseRotator> MouseRotators = new();
     public static bool IsShown;
     public static bool IsGodModeEnabled;
     public static bool IsInstantChopTreeEnabled;
     private static bool _isFlyModeEnabled;
-    private static bool _isDebugConsoleEnabled;
     public static bool IsInstantKillEnabled;
     private static float _speedMultiplier = 1;
+    private static float _jumpMultiplier = 1;
     private static bool _isAllItemsButtonPressed;
     private static bool _isResetButtonPressed;
 
@@ -35,16 +32,18 @@ public class CheatMenu : MelonMod
 
     private static void ReadData()
     {
-        ReadPauseMenu();
         ReadPersons();
         ReadInventories();
-        ReadDebugConsoles();
         ReadMouseRotators();
-        ReadVailActors();
     }
 
     public override void OnLateUpdate()
     {
+        if (Input.GetKeyUp(KeyCode.F1))
+        {
+            DebugConsole.Instance.ShowConsole(!DebugConsole.Instance._showConsole);
+        }
+
         if (Input.GetKeyUp(KeyCode.F10))
         {
             IsShown = !IsShown;
@@ -85,14 +84,6 @@ public class CheatMenu : MelonMod
         }
     }
 
-    private static void ReadPauseMenu()
-    {
-        foreach (var pauseMenu in Resources.FindObjectsOfTypeAll<PauseMenu>())
-        {
-            PauseMenus.Add(pauseMenu);
-        }
-    }
-
     private static void ReadPersons()
     {
         foreach (var person in Resources.FindObjectsOfTypeAll<FirstPersonCharacter>())
@@ -115,6 +106,7 @@ public class CheatMenu : MelonMod
         DefaultValues.DefaultStrafeSpeed = person._strafeSpeed;
         DefaultValues.DefaultCrouchSpeed = person.crouchSpeed;
         DefaultValues.DefaultGravity = person.gravity;
+        DefaultValues.DefaultJumpMultiplier = person._jumpMultiplier;
         if (person.Stats == null) return;
         DefaultValues.DefaultJumpStaminaCost = person.Stats._jumpStaminaCost;
         DefaultValues.DefaultTired = person.Stats._tired;
@@ -137,27 +129,11 @@ public class CheatMenu : MelonMod
         }
     }
 
-    private static void ReadDebugConsoles()
-    {
-        foreach (var debugConsole in Resources.FindObjectsOfTypeAll<DebugConsole>())
-        {
-            DebugConsoles.Add(debugConsole);
-        }
-    }
-
     private static void ReadMouseRotators()
     {
         foreach (var mouseRotator in Resources.FindObjectsOfTypeAll<SimpleMouseRotator>())
         {
             MouseRotators.Add(mouseRotator);
-        }
-    }
-
-    private static void ReadVailActors()
-    {
-        foreach (var vailActor in Resources.FindObjectsOfTypeAll<VailActor>())
-        {
-            VailActors.Add(vailActor);
         }
     }
 
@@ -169,24 +145,22 @@ public class CheatMenu : MelonMod
 
         _isFlyModeEnabled = GUI.Toggle(new Rect(30, 100, 280, 40), _isFlyModeEnabled, "Fly-Mode");
 
-        _isDebugConsoleEnabled = GUI.Toggle(new Rect(30, 140, 280, 40), _isDebugConsoleEnabled, "Debug-Console");
-
-        IsInstantKillEnabled = GUI.Toggle(new Rect(30, 180, 280, 40), IsInstantKillEnabled, "Instant-Kill");
+        IsInstantKillEnabled = GUI.Toggle(new Rect(30, 140, 280, 40), IsInstantKillEnabled, "Instant-Kill");
 
         IsInstantChopTreeEnabled =
-            GUI.Toggle(new Rect(30, 220, 280, 40), IsInstantChopTreeEnabled, "Instant chop tree");
+            GUI.Toggle(new Rect(30, 180, 280, 40), IsInstantChopTreeEnabled, "Instant chop tree");
 
-        GUI.Label(new Rect(30, 260, 280, 40), "Speed-Multiplier:");
-        _speedMultiplier = GUI.HorizontalSlider(new Rect(30, 300, 280, 40), _speedMultiplier, 0, 100);
+        GUI.Label(new Rect(30, 220, 280, 40), "Speed-Multiplier:");
+        _speedMultiplier = GUI.HorizontalSlider(new Rect(30, 260, 280, 40), _speedMultiplier, 0, 100);
 
-        _isAllItemsButtonPressed = GUI.Button(new Rect(30, 340, 280, 40), "Get all items");
+        GUI.Label(new Rect(30, 300, 280, 40), "Jump-Multiplier:");
+        _jumpMultiplier = GUI.HorizontalSlider(new Rect(30, 340, 280, 40), _jumpMultiplier, 0, 100);
 
-        _isResetButtonPressed = GUI.Button(new Rect(30, 380, 280, 40), "Reset all values");
+        _isAllItemsButtonPressed = GUI.Button(new Rect(30, 380, 280, 40), "Get all items");
+
+        _isResetButtonPressed = GUI.Button(new Rect(30, 420, 280, 40), "Reset all values");
         if (!GUI.changed) return;
-        ApplyGodMode();
-        ApplySpeed();
-        ApplyFlyMode();
-        ApplyDebugConsole();
+        ApplyAll();
         CheckGetAllItemsButton();
         CheckResetButton();
     }
@@ -245,6 +219,15 @@ public class CheatMenu : MelonMod
         }
     }
 
+    private static void ApplyJump()
+    {
+        foreach (var person in Persons)
+        {
+            person._jumpMultiplier = _jumpMultiplier;
+            person._setJumpMultiplierAfterJump = _jumpMultiplier;
+        }
+    }
+
     private static void ApplyFlyMode()
     {
         float yMove = 0;
@@ -269,16 +252,6 @@ public class CheatMenu : MelonMod
             var personPosition = person.transform.position;
             person._rigidbody.MovePosition(new Vector3(personPosition.x, personPosition.y + yMove, personPosition.z));
         }
-    }
-
-    private static void ApplyDebugConsole()
-    {
-        foreach (var debugConsole in DebugConsoles)
-        {
-            debugConsole.ShowConsole(_isDebugConsoleEnabled);
-        }
-
-        LockCursor();
     }
 
     private static void CheckGetAllItemsButton()
@@ -316,14 +289,19 @@ public class CheatMenu : MelonMod
     private static void ResetValues()
     {
         _speedMultiplier = 1;
+        _jumpMultiplier = DefaultValues.DefaultJumpMultiplier;
         IsGodModeEnabled = false;
         _isFlyModeEnabled = false;
-        _isDebugConsoleEnabled = false;
         IsInstantKillEnabled = false;
         IsInstantChopTreeEnabled = false;
+        ApplyAll();
+    }
+
+    private static void ApplyAll()
+    {
         ApplyGodMode();
         ApplySpeed();
+        ApplyJump();
         ApplyFlyMode();
-        ApplyDebugConsole();
     }
 }
