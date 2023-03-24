@@ -1,12 +1,10 @@
-﻿using HarmonyLib;
-using Il2Cpp;
+﻿/*using HarmonyLib;
 using Il2CppSons.Ai.Vail;
-using Il2CppSons.Weapon;
 
 namespace CheatMenu;
 
 [HarmonyPatch(typeof(VailActor), "ReceivedDamage")]
-public class DisableSwingWeapon
+public class EnableInstantKill
 {
     public static bool Prefix(ref float amount)
     {
@@ -17,4 +15,4 @@ public class DisableSwingWeapon
 
         return true;
     }
-}
+}*/

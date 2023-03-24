@@ -145,7 +145,7 @@ public class CheatMenu : MelonMod
 
         _isFlyModeEnabled = GUI.Toggle(new Rect(30, 100, 280, 40), _isFlyModeEnabled, "Fly-Mode");
 
-        IsInstantKillEnabled = GUI.Toggle(new Rect(30, 140, 280, 40), IsInstantKillEnabled, "Instant-Kill");
+        // IsInstantKillEnabled = GUI.Toggle(new Rect(30, 140, 280, 40), IsInstantKillEnabled, "Instant-Kill");
 
         IsInstantChopTreeEnabled =
             GUI.Toggle(new Rect(30, 180, 280, 40), IsInstantChopTreeEnabled, "Instant chop tree");
