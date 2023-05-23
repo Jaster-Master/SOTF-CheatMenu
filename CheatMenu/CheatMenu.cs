@@ -98,7 +98,7 @@ public class CheatMenu : MelonMod
     private static void ReadDefaultPersonValues(FirstPersonCharacter? person)
     {
         if (person == null) return;
-        DefaultValues.DefaultStaminaCost = person.staminaCostPerSec;
+        DefaultValues.DefaultStaminaCost = person._runStaminaCostPerSec;
         DefaultValues.DefaultSpeed = person._speed;
         DefaultValues.DefaultWalkSpeed = person._walkSpeed;
         DefaultValues.DefaultRunSpeed = person._runSpeed;
@@ -169,7 +169,7 @@ public class CheatMenu : MelonMod
     {
         foreach (var person in Persons)
         {
-            person.staminaCostPerSec = IsGodModeEnabled ? 0 : DefaultValues.DefaultStaminaCost;
+            person._runStaminaCostPerSec = IsGodModeEnabled ? 0 : DefaultValues.DefaultStaminaCost;
             if (person.Stats == null) continue;
             person.Stats._damageController.SetDamageEnabled(!IsGodModeEnabled);
             person.Stats._jumpStaminaCost = IsGodModeEnabled ? 0 : DefaultValues.DefaultJumpStaminaCost;
