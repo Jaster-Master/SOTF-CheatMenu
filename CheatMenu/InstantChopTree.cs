@@ -12,7 +12,6 @@ public class InstantChopTree
     {
         if (CheatMenu.IsInstantChopTreeEnabled)
         {
-            // TODO: direction could be incorrect
             var direction = __instance.transform.position - other.transform.position;
             __instance._cutManager.InstantCutForceFall(direction);
         }

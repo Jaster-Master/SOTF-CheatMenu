@@ -1,6 +1,6 @@
 ﻿namespace CheatMenu;
 
-public class DefaultValues
+public static class PersonValues
 {
     public static float DefaultStaminaCost = 0;
     public static float DefaultJumpStaminaCost = 0;
@@ -18,7 +18,7 @@ public class DefaultValues
     public static float DefaultBaseStamina = 0;
     public static float DefaultBaseStrength = 0;
     public static float DefaultBaseRested = 0;
-    public static float DefaultBaseTemperatur = 0;
+    public static float DefaultBaseTemperature = 0;
     public static float DefaultGravity = 0;
     public static float DefaultJumpMultiplier = 0;
 }

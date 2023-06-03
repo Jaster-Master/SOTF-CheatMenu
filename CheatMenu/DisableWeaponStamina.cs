@@ -4,7 +4,7 @@ using Il2Cpp;
 namespace CheatMenu;
 
 [HarmonyPatch(typeof(PlayerStats), "OnSwingWeapon")]
-public class DisableStamina
+public class DisableWeaponStamina
 {
     public static bool Prefix(ref float staminaCost)
     {
