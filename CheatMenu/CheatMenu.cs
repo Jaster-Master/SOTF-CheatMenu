@@ -17,7 +17,8 @@ public class CheatMenu : MelonMod
     private static readonly HashSet<PlayerInventory> Inventories = new();
     private static readonly HashSet<SimpleMouseRotator> MouseRotators = new();
     private static readonly HashSet<PauseMenu> PauseMenus = new();
-    private static bool _isShown;
+    private static bool _isCheatMenuShown;
+    private static bool _isDebugConsoleShown;
     public static bool IsGodModeEnabled;
     public static bool IsInstantChopTreeEnabled;
     private static bool _isFlyModeEnabled;
@@ -47,16 +48,18 @@ public class CheatMenu : MelonMod
     {
         if (Input.GetKeyUp(KeyCode.F1))
         {
-            DebugConsole.Instance.ShowConsole(!DebugConsole.Instance._showConsole);
+            _isDebugConsoleShown = !_isDebugConsoleShown;
+            DebugConsole.Instance.ShowConsole(_isDebugConsoleShown);
+            DebugConsole.Instance.enabled = _isDebugConsoleShown;
         }
 
         if (Input.GetKeyUp(KeyCode.F10))
         {
-            _isShown = !_isShown;
+            _isCheatMenuShown = !_isCheatMenuShown;
             LockCursor();
         }
 
-        if (!_isShown)
+        if (!_isCheatMenuShown)
         {
             ApplyFlyMode();
         }
@@ -80,7 +83,7 @@ public class CheatMenu : MelonMod
 
     private static void LockCursor()
     {
-        if (_isShown)
+        if (_isCheatMenuShown)
         {
             InputSystem.Cursor.Enable(true);
             foreach (var mouseRotator in MouseRotators)
@@ -100,7 +103,7 @@ public class CheatMenu : MelonMod
 
     public override void OnGUI()
     {
-        if (_isShown)
+        if (_isCheatMenuShown)
         {
             ShowMenu();
         }
