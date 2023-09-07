@@ -1,4 +1,5 @@
 ﻿using Il2Cpp;
+using Il2CppSons.Gui;
 using Il2CppSons.Input;
 using Il2CppSons.Items.Core;
 using Il2CppTheForest;
@@ -15,6 +16,7 @@ public class CheatMenu : MelonMod
     private static readonly HashSet<LocalPlayer> LocalPlayers = new();
     private static readonly HashSet<PlayerInventory> Inventories = new();
     private static readonly HashSet<SimpleMouseRotator> MouseRotators = new();
+    private static readonly HashSet<PauseMenu> PauseMenus = new();
     private static bool _isShown;
     public static bool IsGodModeEnabled;
     public static bool IsInstantChopTreeEnabled;
@@ -27,6 +29,10 @@ public class CheatMenu : MelonMod
     public override void OnSceneWasLoaded(int buildIndex, string sceneName)
     {
         ReadData();
+        foreach (var pauseMenu in Resources.FindObjectsOfTypeAll<PauseMenu>())
+        {
+            PauseMenus.Add(pauseMenu);
+        }
     }
 
     private static void ReadData()
@@ -53,6 +59,22 @@ public class CheatMenu : MelonMod
         if (!_isShown)
         {
             ApplyFlyMode();
+        }
+
+        // Only in pause menu
+        if (Input.GetKeyUp(KeyCode.F2))
+        {
+            foreach (var pauseMenu in PauseMenus)
+            {
+                pauseMenu.SetSaveMenuActive(!pauseMenu._saveMenuActive);
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.F3))
+        {
+            foreach (var pauseMenu in PauseMenus)
+            {
+                pauseMenu.SetLoadMenuActive(!pauseMenu._loadMenuActive);
+            }
         }
     }
 
