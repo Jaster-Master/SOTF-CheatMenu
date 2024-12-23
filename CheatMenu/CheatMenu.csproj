@@ -7,1037 +7,778 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Reference Include="0Harmony">
-        <HintPath>..\lib\0Harmony.dll</HintPath>
-      </Reference>
-      <Reference Include="Accessibility">
-        <HintPath>..\lib\Accessibility.dll</HintPath>
-      </Reference>
+      <PackageReference Include="LavaGang.MelonLoader" Version="0.6.1" />
+      <PackageReference Include="Lib.Harmony" Version="2.3.3" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Reference Include="Assembly-CSharp">
-        <HintPath>..\lib\Assembly-CSharp.dll</HintPath>
-      </Reference>
-      <Reference Include="Boo.Lang">
-        <HintPath>..\lib\Boo.Lang.dll</HintPath>
-      </Reference>
-      <Reference Include="Boo.Lang.Compiler">
-        <HintPath>..\lib\Boo.Lang.Compiler.dll</HintPath>
-      </Reference>
-      <Reference Include="Boo.Lang.Extensions">
-        <HintPath>..\lib\Boo.Lang.Extensions.dll</HintPath>
-      </Reference>
-      <Reference Include="Boo.Lang.Parser">
-        <HintPath>..\lib\Boo.Lang.Parser.dll</HintPath>
-      </Reference>
-      <Reference Include="Boo.Lang.PatternMatching">
-        <HintPath>..\lib\Boo.Lang.PatternMatching.dll</HintPath>
-      </Reference>
-      <Reference Include="Boo.Lang.Useful">
-        <HintPath>..\lib\Boo.Lang.Useful.dll</HintPath>
-      </Reference>
-      <Reference Include="Commons.Xml.Relaxng">
-        <HintPath>..\lib\Commons.Xml.Relaxng.dll</HintPath>
-      </Reference>
-      <Reference Include="cscompmgd">
-        <HintPath>..\lib\cscompmgd.dll</HintPath>
-      </Reference>
-      <Reference Include="CustomMarshalers">
-        <HintPath>..\lib\CustomMarshalers.dll</HintPath>
-      </Reference>
-      <Reference Include="I18N">
-        <HintPath>..\lib\I18N.dll</HintPath>
-      </Reference>
-      <Reference Include="I18N.CJK">
-        <HintPath>..\lib\I18N.CJK.dll</HintPath>
-      </Reference>
-      <Reference Include="I18N.MidEast">
-        <HintPath>..\lib\I18N.MidEast.dll</HintPath>
-      </Reference>
-      <Reference Include="I18N.Other">
-        <HintPath>..\lib\I18N.Other.dll</HintPath>
-      </Reference>
-      <Reference Include="I18N.Rare">
-        <HintPath>..\lib\I18N.Rare.dll</HintPath>
-      </Reference>
-      <Reference Include="I18N.West">
-        <HintPath>..\lib\I18N.West.dll</HintPath>
-      </Reference>
-      <Reference Include="IBM.Data.DB2">
-        <HintPath>..\lib\IBM.Data.DB2.dll</HintPath>
+        <HintPath>..\lib\cpp\Assembly-CSharp.dll</HintPath>
       </Reference>
       <Reference Include="Iced">
-        <HintPath>..\lib\Iced.dll</HintPath>
+        <HintPath>..\lib\support\Iced.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cpp">
-        <HintPath>..\lib\Il2Cpp.dll</HintPath>
+        <HintPath>..\lib\support\Il2Cpp.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppAdvancedTerrainGrass">
-        <HintPath>..\lib\Il2CppAdvancedTerrainGrass.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppAdvancedTerrainGrass.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppAmplifyImposters">
-        <HintPath>..\lib\Il2CppAmplifyImposters.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppAmplifyImposters.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppAnimatorEvent">
-        <HintPath>..\lib\Il2CppAnimatorEvent.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppAssemblyGenerator">
-        <HintPath>..\lib\Il2CppAssemblyGenerator.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppAnimatorEvent.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppAstarPathfindingProject">
-        <HintPath>..\lib\Il2CppAstarPathfindingProject.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppAstarPathfindingProject.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppBacktrace.Unity">
-        <HintPath>..\lib\Il2CppBacktrace.Unity.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppBacktrace.Unity.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppBlobNetworking">
+        <HintPath>..\lib\cpp\Il2CppBlobNetworking.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppbolt">
-        <HintPath>..\lib\Il2Cppbolt.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cppbolt.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppBolt.Unity">
-        <HintPath>..\lib\Il2CppBolt.Unity.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppBolt.Unity.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppbolt.user">
-        <HintPath>..\lib\Il2Cppbolt.user.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cppbolt.user.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppBulletBallistics">
-        <HintPath>..\lib\Il2CppBulletBallistics.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppBulletBallistics.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2Cppcom.alteregogames.aeg-fsr.Runtime">
+        <HintPath>..\lib\cpp\Il2Cppcom.alteregogames.aeg-fsr.Runtime.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2Cppcom.alteregogames.aeg-fsr.Runtime.HDRP">
+        <HintPath>..\lib\cpp\Il2Cppcom.alteregogames.aeg-fsr.Runtime.HDRP.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppcom.rlabrecque.steamworks.net">
-        <HintPath>..\lib\Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppCommandLine">
-        <HintPath>..\lib\Il2CppCommandLine.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppCommandLine.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppCrest">
-        <HintPath>..\lib\Il2CppCrest.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppCrest.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppCrest.Examples">
-        <HintPath>..\lib\Il2CppCrest.Examples.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppCrest.Examples.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppDigitalRuby.ProceduralLightning">
-        <HintPath>..\lib\Il2CppDigitalRuby.ProceduralLightning.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppDigitalRuby.ProceduralLightning.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppDrawing">
+        <HintPath>..\lib\cpp\Il2CppDrawing.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppDynamicBone">
-        <HintPath>..\lib\Il2CppDynamicBone.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppDynamicBone.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppEndnight">
-        <HintPath>..\lib\Il2CppEndnight.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppEndnight.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppEndnight.Backtrace">
-        <HintPath>..\lib\Il2CppEndnight.Backtrace.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppEndnight.Backtrace.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppEndnight.Localization">
-        <HintPath>..\lib\Il2CppEndnight.Localization.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppEndnight.Localization.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppEndnight.PrefabStore">
+        <HintPath>..\lib\cpp\Il2CppEndnight.PrefabStore.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppEndnight.Utilities.CommandLine">
+        <HintPath>..\lib\cpp\Il2CppEndnight.Utilities.CommandLine.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppEndnight.Utilities.Configurations">
+        <HintPath>..\lib\cpp\Il2CppEndnight.Utilities.Configurations.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppEndnight.Utilities.Dedicated">
+        <HintPath>..\lib\cpp\Il2CppEndnight.Utilities.Dedicated.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppEndnight.Utilities.Logging">
+        <HintPath>..\lib\cpp\Il2CppEndnight.Utilities.Logging.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppEndnight.Utilities.Misc">
+        <HintPath>..\lib\cpp\Il2CppEndnight.Utilities.Misc.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppExpanse">
-        <HintPath>..\lib\Il2CppExpanse.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppFluidFlow">
-        <HintPath>..\lib\Il2CppFluidFlow.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppExpanse.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppFMOD.Unity">
-        <HintPath>..\lib\Il2CppFMOD.Unity.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppFMOD.Unity.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppgeometry3Sharp">
-        <HintPath>..\lib\Il2Cppgeometry3Sharp.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cppgeometry3Sharp.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppInterop.Common">
-        <HintPath>..\lib\Il2CppInterop.Common.dll</HintPath>
+        <HintPath>..\lib\support\Il2CppInterop.Common.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppInterop.HarmonySupport">
-        <HintPath>..\lib\Il2CppInterop.HarmonySupport.dll</HintPath>
+        <HintPath>..\lib\support\Il2CppInterop.HarmonySupport.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppInterop.Runtime">
-        <HintPath>..\lib\Il2CppInterop.Runtime.dll</HintPath>
+        <HintPath>..\lib\support\Il2CppInterop.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppiTween">
-        <HintPath>..\lib\Il2CppiTween.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppiTween.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppJustinGarza.GaussianBlurHDRP">
-        <HintPath>..\lib\Il2CppJustinGarza.GaussianBlurHDRP.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppJustinGarza.GaussianBlurHDRP.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppLibNoise.Unity">
-        <HintPath>..\lib\Il2CppLibNoise.Unity.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppLibNoise.Unity.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppLitJson">
-        <HintPath>..\lib\Il2CppLitJson.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppLitJson.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppLocomotion">
-        <HintPath>..\lib\Il2CppLocomotion.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppLocomotion.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppMicroSplatChanges">
-        <HintPath>..\lib\Il2CppMicroSplatChanges.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppMicroSplatChanges.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppMono.Security">
-        <HintPath>..\lib\Il2CppMono.Security.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppMono.Security.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppmscorlib">
-        <HintPath>..\lib\Il2Cppmscorlib.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cppmscorlib.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppMudBun">
-        <HintPath>..\lib\Il2CppMudBun.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppMudBun.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppMudBun.Manager">
-        <HintPath>..\lib\Il2CppMudBun.Manager.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppMudBun.Manager.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppMultiplayer.Dedicated">
+        <HintPath>..\lib\cpp\Il2CppMultiplayer.Dedicated.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNatureManufacture.SplineSystem">
-        <HintPath>..\lib\Il2CppNatureManufacture.SplineSystem.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNatureManufacture.SplineSystem.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNewtonsoft.Json">
-        <HintPath>..\lib\Il2CppNewtonsoft.Json.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNewtonsoft.Json.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNGUI">
-        <HintPath>..\lib\Il2CppNGUI.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNGUI.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.AssetInfo">
-        <HintPath>..\lib\Il2CppNWH.Common.AssetInfo.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.AssetInfo.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.Cameras">
-        <HintPath>..\lib\Il2CppNWH.Common.Cameras.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.Cameras.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.CoM">
-        <HintPath>..\lib\Il2CppNWH.Common.CoM.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.CoM.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.Demo">
-        <HintPath>..\lib\Il2CppNWH.Common.Demo.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.Demo.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.FloatingOrigin">
-        <HintPath>..\lib\Il2CppNWH.Common.FloatingOrigin.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.FloatingOrigin.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.Input">
-        <HintPath>..\lib\Il2CppNWH.Common.Input.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.Input.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.NUI">
-        <HintPath>..\lib\Il2CppNWH.Common.NUI.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.NUI.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.SceneManagement">
-        <HintPath>..\lib\Il2CppNWH.Common.SceneManagement.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.SceneManagement.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.Utility">
-        <HintPath>..\lib\Il2CppNWH.Common.Utility.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.Utility.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.Common.Vehicle">
-        <HintPath>..\lib\Il2CppNWH.Common.Vehicle.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.Common.Vehicle.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppNWH.DWP2">
-        <HintPath>..\lib\Il2CppNWH.DWP2.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppNWH.DWP2.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppObi">
-        <HintPath>..\lib\Il2CppObi.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppObi.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppOSK">
+        <HintPath>..\lib\cpp\Il2CppOSK.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppPackageTools">
+        <HintPath>..\lib\cpp\Il2CppPackageTools.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppPathCreator">
-        <HintPath>..\lib\Il2CppPathCreator.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppPathCreator.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppPathfinding.ClipperLib">
-        <HintPath>..\lib\Il2CppPathfinding.ClipperLib.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppPathfinding.ClipperLib.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppPathfinding.Ionic.Zip.Reduced">
-        <HintPath>..\lib\Il2CppPathfinding.Ionic.Zip.Reduced.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppPathfinding.Ionic.Zip.Reduced.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppPathfinding.Poly2Tri">
-        <HintPath>..\lib\Il2CppPathfinding.Poly2Tri.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppPathfinding.Poly2Tri.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppPathologicalGames">
-        <HintPath>..\lib\Il2CppPathologicalGames.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppPathologicalGames.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppRenderStreamDepth">
-        <HintPath>..\lib\Il2CppRenderStreamDepth.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppRenderStreamDepth.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppRootMotion">
-        <HintPath>..\lib\Il2CppRootMotion.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppRootMotion.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppShapesRuntime">
-        <HintPath>..\lib\Il2CppShapesRuntime.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppShapesRuntime.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppShapesSamples">
-        <HintPath>..\lib\Il2CppShapesSamples.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppShapesSamples.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSimpleLOD">
-        <HintPath>..\lib\Il2CppSimpleLOD.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSimpleLOD.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSirenix.OdinInspector.Attributes">
-        <HintPath>..\lib\Il2CppSirenix.OdinInspector.Attributes.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSirenix.OdinInspector.Attributes.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons">
-        <HintPath>..\lib\Il2CppSons.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Ai.Utilities">
-        <HintPath>..\lib\Il2CppSons.Ai.Utilities.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Ai.Utilities.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Ai.Vail">
-        <HintPath>..\lib\Il2CppSons.Ai.Vail.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Ai.Vail.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Animation.Mae">
-        <HintPath>..\lib\Il2CppSons.Animation.Mae.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Animation.Mae.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Areas">
-        <HintPath>..\lib\Il2CppSons.Areas.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Areas.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Atmosphere">
-        <HintPath>..\lib\Il2CppSons.Atmosphere.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Atmosphere.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Attributes">
-        <HintPath>..\lib\Il2CppSons.Attributes.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Attributes.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Cinematics">
-        <HintPath>..\lib\Il2CppSons.Cinematics.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Cinematics.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Construction">
-        <HintPath>..\lib\Il2CppSons.Construction.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppSons.Construction.GRABS">
-        <HintPath>..\lib\Il2CppSons.Construction.GRABS.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Construction.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Construction.Utils">
-        <HintPath>..\lib\Il2CppSons.Construction.Utils.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Construction.Utils.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.ConstructionBoltToken">
-        <HintPath>..\lib\Il2CppSons.ConstructionBoltToken.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.ConstructionBoltToken.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Crest">
-        <HintPath>..\lib\Il2CppSons.Crest.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Crest.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Debug">
-        <HintPath>..\lib\Il2CppSons.Debug.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Debug.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Dlss">
-        <HintPath>..\lib\Il2CppSons.Dlss.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Dlss.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Electricity">
+        <HintPath>..\lib\cpp\Il2CppSons.Electricity.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Environment">
-        <HintPath>..\lib\Il2CppSons.Environment.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Environment.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Events">
-        <HintPath>..\lib\Il2CppSons.Events.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Events.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Extensions">
-        <HintPath>..\lib\Il2CppSons.Extensions.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Extensions.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.FieldOfView">
-        <HintPath>..\lib\Il2CppSons.FieldOfView.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.FieldOfView.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.FMOD">
-        <HintPath>..\lib\Il2CppSons.FMOD.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.FMOD.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.FpsUtility">
-        <HintPath>..\lib\Il2CppSons.FpsUtility.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.FpsUtility.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.GameApplication">
-        <HintPath>..\lib\Il2CppSons.GameApplication.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.GameApplication.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Gameplay.GameSetup">
-        <HintPath>..\lib\Il2CppSons.Gameplay.GameSetup.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Gameplay.GameSetup.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Gameplay.LevelProps">
-        <HintPath>..\lib\Il2CppSons.Gameplay.LevelProps.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Gameplay.LevelProps.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Gameplay.StatusEffects">
-        <HintPath>..\lib\Il2CppSons.Gameplay.StatusEffects.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Gameplay.StatusEffects.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Geometry">
+        <HintPath>..\lib\cpp\Il2CppSons.Geometry.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Gui">
-        <HintPath>..\lib\Il2CppSons.Gui.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Gui.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Gui.Colors">
-        <HintPath>..\lib\Il2CppSons.Gui.Colors.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Gui.Colors.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Gui.Multiplayer">
-        <HintPath>..\lib\Il2CppSons.Gui.Multiplayer.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Gui.Multiplayer.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Gui.Multiplayer.Notifications">
+        <HintPath>..\lib\cpp\Il2CppSons.Gui.Multiplayer.Notifications.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Gui.Options">
-        <HintPath>..\lib\Il2CppSons.Gui.Options.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Gui.Options.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Gui.VersionUpgrade">
+        <HintPath>..\lib\cpp\Il2CppSons.Gui.VersionUpgrade.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Hardware">
+        <HintPath>..\lib\cpp\Il2CppSons.Hardware.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Input">
-        <HintPath>..\lib\Il2CppSons.Input.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Input.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Interfaces">
-        <HintPath>..\lib\Il2CppSons.Interfaces.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Interfaces.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Item">
-        <HintPath>..\lib\Il2CppSons.Item.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Item.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Loading">
-        <HintPath>..\lib\Il2CppSons.Loading.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Loading.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Lodding">
-        <HintPath>..\lib\Il2CppSons.Lodding.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Lodding.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Multiplayer">
-        <HintPath>..\lib\Il2CppSons.Multiplayer.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Multiplayer.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Multiplayer.Configurations">
+        <HintPath>..\lib\cpp\Il2CppSons.Multiplayer.Configurations.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Multiplayer.NamedIntIds">
+        <HintPath>..\lib\cpp\Il2CppSons.Multiplayer.NamedIntIds.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.ObsoleteMonos">
-        <HintPath>..\lib\Il2CppSons.ObsoleteMonos.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.ObsoleteMonos.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Physics">
-        <HintPath>..\lib\Il2CppSons.Physics.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Physics.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.PostProcessing">
-        <HintPath>..\lib\Il2CppSons.PostProcessing.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.PostProcessing.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.PostProcessing.FoundFootage">
+        <HintPath>..\lib\cpp\Il2CppSons.PostProcessing.FoundFootage.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Quality">
-        <HintPath>..\lib\Il2CppSons.Quality.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Quality.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Ragdoll">
-        <HintPath>..\lib\Il2CppSons.Ragdoll.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Ragdoll.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Rendering">
-        <HintPath>..\lib\Il2CppSons.Rendering.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Rendering.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Rocks">
+        <HintPath>..\lib\cpp\Il2CppSons.Rocks.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Save">
-        <HintPath>..\lib\Il2CppSons.Save.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Save.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Scratchpad">
-        <HintPath>..\lib\Il2CppSons.Scratchpad.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Scratchpad.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Settings">
-        <HintPath>..\lib\Il2CppSons.Settings.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Settings.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.SettingsWrappers">
-        <HintPath>..\lib\Il2CppSons.SettingsWrappers.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.SettingsWrappers.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.SonsTerrain">
+        <HintPath>..\lib\cpp\Il2CppSons.SonsTerrain.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.StatSystem">
-        <HintPath>..\lib\Il2CppSons.StatSystem.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.StatSystem.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Subtitles">
+        <HintPath>..\lib\cpp\Il2CppSons.Subtitles.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSons.Subtitles.Tooling">
+        <HintPath>..\lib\cpp\Il2CppSons.Subtitles.Tooling.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Testing">
-        <HintPath>..\lib\Il2CppSons.Testing.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Testing.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Tests">
-        <HintPath>..\lib\Il2CppSons.Tests.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Tests.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Trees">
-        <HintPath>..\lib\Il2CppSons.Trees.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Trees.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.UiElements">
-        <HintPath>..\lib\Il2CppSons.UiElements.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.UiElements.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Utilities">
-        <HintPath>..\lib\Il2CppSons.Utilities.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Utilities.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.VFX">
-        <HintPath>..\lib\Il2CppSons.VFX.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.VFX.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.VFX.SimpleUnderwater">
-        <HintPath>..\lib\Il2CppSons.VFX.SimpleUnderwater.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.VFX.SimpleUnderwater.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSons.Weapon">
-        <HintPath>..\lib\Il2CppSons.Weapon.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSons.Weapon.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSonsTerrainScripts">
-        <HintPath>..\lib\Il2CppSonsTerrainScripts.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSonsTerrainScripts.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppStandaloneFileBrowser">
-        <HintPath>..\lib\Il2CppStandaloneFileBrowser.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppStandaloneFileBrowser.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSteamVR">
-        <HintPath>..\lib\Il2CppSteamVR.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSteamVR.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppStreamingAssetsManager">
-        <HintPath>..\lib\Il2CppStreamingAssetsManager.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppStreamingAssetsManager.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem">
-        <HintPath>..\lib\Il2CppSystem.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Configuration">
-        <HintPath>..\lib\Il2CppSystem.Configuration.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.Configuration.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Core">
-        <HintPath>..\lib\Il2CppSystem.Core.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.Core.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Data">
-        <HintPath>..\lib\Il2CppSystem.Data.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.Data.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.IO.Compression">
+        <HintPath>..\lib\cpp\Il2CppSystem.IO.Compression.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem.IO.Compression.FileSystem">
+        <HintPath>..\lib\cpp\Il2CppSystem.IO.Compression.FileSystem.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Numerics">
-        <HintPath>..\lib\Il2CppSystem.Numerics.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.Numerics.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Runtime.Serialization">
-        <HintPath>..\lib\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.Runtime.Serialization.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Xml">
-        <HintPath>..\lib\Il2CppSystem.Xml.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.Xml.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Xml.Linq">
-        <HintPath>..\lib\Il2CppSystem.Xml.Linq.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppSystem.Xml.Linq.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppTayx.Graphy">
-        <HintPath>..\lib\Il2CppTayx.Graphy.dll</HintPath>
-      </Reference>
-      <Reference Include="Il2CppTechniePhysicsCreator">
-        <HintPath>..\lib\Il2CppTechniePhysicsCreator.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppTayx.Graphy.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppTheForest.Commons">
-        <HintPath>..\lib\Il2CppTheForest.Commons.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppTheForest.Commons.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppTheForest.Modding">
-        <HintPath>..\lib\Il2CppTheForest.Modding.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppTheForest.Modding.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppTheForest.Utils">
-        <HintPath>..\lib\Il2CppTheForest.Utils.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppTheForest.Utils.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppudpkit">
-        <HintPath>..\lib\Il2Cppudpkit.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cppudpkit.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppudpkit.common">
-        <HintPath>..\lib\Il2Cppudpkit.common.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cppudpkit.common.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppUpgen.Lighting">
-        <HintPath>..\lib\Il2CppUpgen.Lighting.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppUpgen.Lighting.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppValve.Newtonsoft.Json">
-        <HintPath>..\lib\Il2CppValve.Newtonsoft.Json.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppValve.Newtonsoft.Json.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppVFXGraph.OutputEventHandlers">
-        <HintPath>..\lib\Il2CppVFXGraph.OutputEventHandlers.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppVFXGraph.OutputEventHandlers.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppVolumetricBloodFX">
-        <HintPath>..\lib\Il2CppVolumetricBloodFX.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2CppVolumetricBloodFX.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cpp__Generated">
-        <HintPath>..\lib\Il2Cpp__Generated.dll</HintPath>
-      </Reference>
-      <Reference Include="IPA">
-        <HintPath>..\lib\IPA.dll</HintPath>
-      </Reference>
-      <Reference Include="MelonLoader">
-        <HintPath>..\lib\MelonLoader.dll</HintPath>
-      </Reference>
-      <Reference Include="Microsoft.CSharp">
-        <HintPath>..\lib\Microsoft.CSharp.dll</HintPath>
+        <HintPath>..\lib\cpp\Il2Cpp__Generated.dll</HintPath>
       </Reference>
       <Reference Include="Microsoft.Extensions.Logging.Abstractions">
-        <HintPath>..\lib\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
-      </Reference>
-      <Reference Include="Microsoft.Web.Infrastructure">
-        <HintPath>..\lib\Microsoft.Web.Infrastructure.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.CompilerServices.SymbolWriter">
-        <HintPath>..\lib\Mono.CompilerServices.SymbolWriter.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.CSharp">
-        <HintPath>..\lib\Mono.CSharp.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.Data.Sqlite">
-        <HintPath>..\lib\Mono.Data.Sqlite.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.Data.Tds">
-        <HintPath>..\lib\Mono.Data.Tds.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.Messaging">
-        <HintPath>..\lib\Mono.Messaging.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.Posix">
-        <HintPath>..\lib\Mono.Posix.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.Security">
-        <HintPath>..\lib\Mono.Security.dll</HintPath>
-      </Reference>
-      <Reference Include="Mono.WebBrowser">
-        <HintPath>..\lib\Mono.WebBrowser.dll</HintPath>
-      </Reference>
-      <Reference Include="MonoMod.RuntimeDetour">
-        <HintPath>..\lib\MonoMod.RuntimeDetour.dll</HintPath>
-      </Reference>
-      <Reference Include="MonoMod.Utils">
-        <HintPath>..\lib\MonoMod.Utils.dll</HintPath>
-      </Reference>
-      <Reference Include="mscorlib">
-        <HintPath>..\lib\mscorlib.dll</HintPath>
-      </Reference>
-      <Reference Include="netstandard">
-        <HintPath>..\lib\netstandard.dll</HintPath>
-      </Reference>
-      <Reference Include="Newtonsoft.Json">
-        <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
-      </Reference>
-      <Reference Include="Novell.Directory.Ldap">
-        <HintPath>..\lib\Novell.Directory.Ldap.dll</HintPath>
+        <HintPath>..\lib\support\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
       </Reference>
       <Reference Include="Preload">
-        <HintPath>..\lib\Preload.dll</HintPath>
-      </Reference>
-      <Reference Include="SMDiagnostics">
-        <HintPath>..\lib\SMDiagnostics.dll</HintPath>
-      </Reference>
-      <Reference Include="System">
-        <HintPath>..\lib\System.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ComponentModel.Composition">
-        <HintPath>..\lib\System.ComponentModel.Composition.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ComponentModel.DataAnnotations">
-        <HintPath>..\lib\System.ComponentModel.DataAnnotations.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Configuration">
-        <HintPath>..\lib\System.Configuration.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Configuration.Install">
-        <HintPath>..\lib\System.Configuration.Install.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Core">
-        <HintPath>..\lib\System.Core.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Data">
-        <HintPath>..\lib\System.Data.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Data.DataSetExtensions">
-        <HintPath>..\lib\System.Data.DataSetExtensions.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Data.Entity">
-        <HintPath>..\lib\System.Data.Entity.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Data.Linq">
-        <HintPath>..\lib\System.Data.Linq.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Data.OracleClient">
-        <HintPath>..\lib\System.Data.OracleClient.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Data.Services">
-        <HintPath>..\lib\System.Data.Services.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Data.Services.Client">
-        <HintPath>..\lib\System.Data.Services.Client.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Design">
-        <HintPath>..\lib\System.Design.dll</HintPath>
-      </Reference>
-      <Reference Include="System.DirectoryServices">
-        <HintPath>..\lib\System.DirectoryServices.dll</HintPath>
-      </Reference>
-      <Reference Include="System.DirectoryServices.Protocols">
-        <HintPath>..\lib\System.DirectoryServices.Protocols.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Drawing">
-        <HintPath>..\lib\System.Drawing.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Drawing.Design">
-        <HintPath>..\lib\System.Drawing.Design.dll</HintPath>
-      </Reference>
-      <Reference Include="System.EnterpriseServices">
-        <HintPath>..\lib\System.EnterpriseServices.dll</HintPath>
-      </Reference>
-      <Reference Include="System.IdentityModel">
-        <HintPath>..\lib\System.IdentityModel.dll</HintPath>
-      </Reference>
-      <Reference Include="System.IdentityModel.Selectors">
-        <HintPath>..\lib\System.IdentityModel.Selectors.dll</HintPath>
-      </Reference>
-      <Reference Include="System.IO.Compression">
-        <HintPath>..\lib\System.IO.Compression.dll</HintPath>
-      </Reference>
-      <Reference Include="System.IO.Compression.FileSystem">
-        <HintPath>..\lib\System.IO.Compression.FileSystem.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Json">
-        <HintPath>..\lib\System.Json.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Management">
-        <HintPath>..\lib\System.Management.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Messaging">
-        <HintPath>..\lib\System.Messaging.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Net">
-        <HintPath>..\lib\System.Net.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Net.Http">
-        <HintPath>..\lib\System.Net.Http.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Net.Http.Formatting">
-        <HintPath>..\lib\System.Net.Http.Formatting.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Net.Http.WebRequest">
-        <HintPath>..\lib\System.Net.Http.WebRequest.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Numerics">
-        <HintPath>..\lib\System.Numerics.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Numerics.Vectors">
-        <HintPath>..\lib\System.Numerics.Vectors.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Reflection.Context">
-        <HintPath>..\lib\System.Reflection.Context.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Runtime.Caching">
-        <HintPath>..\lib\System.Runtime.Caching.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Runtime.DurableInstancing">
-        <HintPath>..\lib\System.Runtime.DurableInstancing.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Runtime.Remoting">
-        <HintPath>..\lib\System.Runtime.Remoting.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Runtime.Serialization">
-        <HintPath>..\lib\System.Runtime.Serialization.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Runtime.Serialization.Formatters.Soap">
-        <HintPath>..\lib\System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Security">
-        <HintPath>..\lib\System.Security.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ServiceModel">
-        <HintPath>..\lib\System.ServiceModel.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ServiceModel.Activation">
-        <HintPath>..\lib\System.ServiceModel.Activation.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ServiceModel.Discovery">
-        <HintPath>..\lib\System.ServiceModel.Discovery.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ServiceModel.Internals">
-        <HintPath>..\lib\System.ServiceModel.Internals.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ServiceModel.Routing">
-        <HintPath>..\lib\System.ServiceModel.Routing.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ServiceModel.Web">
-        <HintPath>..\lib\System.ServiceModel.Web.dll</HintPath>
-      </Reference>
-      <Reference Include="System.ServiceProcess">
-        <HintPath>..\lib\System.ServiceProcess.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Transactions">
-        <HintPath>..\lib\System.Transactions.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web">
-        <HintPath>..\lib\System.Web.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Abstractions">
-        <HintPath>..\lib\System.Web.Abstractions.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.ApplicationServices">
-        <HintPath>..\lib\System.Web.ApplicationServices.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.DynamicData">
-        <HintPath>..\lib\System.Web.DynamicData.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Extensions">
-        <HintPath>..\lib\System.Web.Extensions.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Extensions.Design">
-        <HintPath>..\lib\System.Web.Extensions.Design.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Http">
-        <HintPath>..\lib\System.Web.Http.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Http.SelfHost">
-        <HintPath>..\lib\System.Web.Http.SelfHost.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Http.WebHost">
-        <HintPath>..\lib\System.Web.Http.WebHost.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Mvc">
-        <HintPath>..\lib\System.Web.Mvc.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Razor">
-        <HintPath>..\lib\System.Web.Razor.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.RegularExpressions">
-        <HintPath>..\lib\System.Web.RegularExpressions.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Routing">
-        <HintPath>..\lib\System.Web.Routing.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.Services">
-        <HintPath>..\lib\System.Web.Services.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.WebPages">
-        <HintPath>..\lib\System.Web.WebPages.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.WebPages.Deployment">
-        <HintPath>..\lib\System.Web.WebPages.Deployment.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Web.WebPages.Razor">
-        <HintPath>..\lib\System.Web.WebPages.Razor.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Windows.Forms">
-        <HintPath>..\lib\System.Windows.Forms.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Windows.Forms.DataVisualization">
-        <HintPath>..\lib\System.Windows.Forms.DataVisualization.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Xaml">
-        <HintPath>..\lib\System.Xaml.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Xml">
-        <HintPath>..\lib\System.Xml.dll</HintPath>
-      </Reference>
-      <Reference Include="System.Xml.Linq">
-        <HintPath>..\lib\System.Xml.Linq.dll</HintPath>
-      </Reference>
-      <Reference Include="SystemWebTestShim">
-        <HintPath>..\lib\SystemWebTestShim.dll</HintPath>
+        <HintPath>..\lib\support\Preload.dll</HintPath>
       </Reference>
       <Reference Include="Tomlet">
-        <HintPath>..\lib\Tomlet.dll</HintPath>
+        <HintPath>..\lib\support\Tomlet.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Addressables">
-        <HintPath>..\lib\Unity.Addressables.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Addressables.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Burst">
-        <HintPath>..\lib\Unity.Burst.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Burst.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>..\lib\Unity.Burst.Unsafe.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Burst.Unsafe.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Collections">
-        <HintPath>..\lib\Unity.Collections.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Collections.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Collections.LowLevel.ILSupport">
-        <HintPath>..\lib\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       </Reference>
       <Reference Include="Unity.CrossSceneReference">
-        <HintPath>..\lib\Unity.CrossSceneReference.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.CrossSceneReference.dll</HintPath>
       </Reference>
       <Reference Include="Unity.InputSystem">
-        <HintPath>..\lib\Unity.InputSystem.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.InputSystem.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Localization">
-        <HintPath>..\lib\Unity.Localization.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Localization.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Mathematics">
-        <HintPath>..\lib\Unity.Mathematics.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Mathematics.dll</HintPath>
       </Reference>
       <Reference Include="Unity.RenderPipelines.BatchRendererGroup-Testing">
-        <HintPath>..\lib\Unity.RenderPipelines.BatchRendererGroup-Testing.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.RenderPipelines.BatchRendererGroup-Testing.dll</HintPath>
       </Reference>
       <Reference Include="Unity.RenderPipelines.Core.Runtime">
-        <HintPath>..\lib\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
-        <HintPath>..\lib\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
-        <HintPath>..\lib\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="Unity.ResourceManager">
-        <HintPath>..\lib\Unity.ResourceManager.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.ResourceManager.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Splines">
-        <HintPath>..\lib\Unity.Splines.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Splines.dll</HintPath>
       </Reference>
       <Reference Include="Unity.TextMeshPro">
-        <HintPath>..\lib\Unity.TextMeshPro.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.TextMeshPro.dll</HintPath>
       </Reference>
       <Reference Include="Unity.Timeline">
-        <HintPath>..\lib\Unity.Timeline.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.Timeline.dll</HintPath>
       </Reference>
       <Reference Include="Unity.VisualEffectGraph.Runtime">
-        <HintPath>..\lib\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+        <HintPath>..\lib\unity\Unity.VisualEffectGraph.Runtime.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
-        <HintPath>..\lib\UnityEngine.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.AccessibilityModule">
-        <HintPath>..\lib\UnityEngine.AccessibilityModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.AccessibilityModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.AIModule">
-        <HintPath>..\lib\UnityEngine.AIModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.AIModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.AndroidJNIModule">
-        <HintPath>..\lib\UnityEngine.AndroidJNIModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.AndroidJNIModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.AnimationModule">
-        <HintPath>..\lib\UnityEngine.AnimationModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.AnimationModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ARModule">
-        <HintPath>..\lib\UnityEngine.ARModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ARModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.AssetBundleModule">
-        <HintPath>..\lib\UnityEngine.AssetBundleModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.AssetBundleModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.AudioModule">
-        <HintPath>..\lib\UnityEngine.AudioModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.AudioModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ClothModule">
-        <HintPath>..\lib\UnityEngine.ClothModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ClothModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ClusterInputModule">
-        <HintPath>..\lib\UnityEngine.ClusterInputModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ClusterInputModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ClusterRendererModule">
-        <HintPath>..\lib\UnityEngine.ClusterRendererModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ClusterRendererModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ContentLoadModule">
-        <HintPath>..\lib\UnityEngine.ContentLoadModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ContentLoadModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.CoreModule">
-        <HintPath>..\lib\UnityEngine.CoreModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.CrashReportingModule">
-        <HintPath>..\lib\UnityEngine.CrashReportingModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.CrashReportingModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.DirectorModule">
-        <HintPath>..\lib\UnityEngine.DirectorModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.DirectorModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.DSPGraphModule">
-        <HintPath>..\lib\UnityEngine.DSPGraphModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.DSPGraphModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.GameCenterModule">
-        <HintPath>..\lib\UnityEngine.GameCenterModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.GameCenterModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.GIModule">
-        <HintPath>..\lib\UnityEngine.GIModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.GIModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.GridModule">
-        <HintPath>..\lib\UnityEngine.GridModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.GridModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.HotReloadModule">
-        <HintPath>..\lib\UnityEngine.HotReloadModule.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.Il2CppAssetBundleManager">
-        <HintPath>..\lib\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
-      </Reference>
-      <Reference Include="UnityEngine.Il2CppImageConversionManager">
-        <HintPath>..\lib\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.HotReloadModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ImageConversionModule">
-        <HintPath>..\lib\UnityEngine.ImageConversionModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ImageConversionModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.IMGUIModule">
-        <HintPath>..\lib\UnityEngine.IMGUIModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.IMGUIModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.InputLegacyModule">
-        <HintPath>..\lib\UnityEngine.InputLegacyModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.InputLegacyModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.InputModule">
-        <HintPath>..\lib\UnityEngine.InputModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.InputModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.JSONSerializeModule">
-        <HintPath>..\lib\UnityEngine.JSONSerializeModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.JSONSerializeModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.LocalizationModule">
-        <HintPath>..\lib\UnityEngine.LocalizationModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.LocalizationModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.NVIDIAModule">
-        <HintPath>..\lib\UnityEngine.NVIDIAModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.NVIDIAModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ParticleSystemModule">
-        <HintPath>..\lib\UnityEngine.ParticleSystemModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ParticleSystemModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.PerformanceReportingModule">
-        <HintPath>..\lib\UnityEngine.PerformanceReportingModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.PerformanceReportingModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.Physics2DModule">
-        <HintPath>..\lib\UnityEngine.Physics2DModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.Physics2DModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.PhysicsModule">
-        <HintPath>..\lib\UnityEngine.PhysicsModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.PhysicsModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ProfilerModule">
-        <HintPath>..\lib\UnityEngine.ProfilerModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ProfilerModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.PropertiesModule">
-        <HintPath>..\lib\UnityEngine.PropertiesModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.PropertiesModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
-        <HintPath>..\lib\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.ScreenCaptureModule">
-        <HintPath>..\lib\UnityEngine.ScreenCaptureModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.ScreenCaptureModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.SharedInternalsModule">
-        <HintPath>..\lib\UnityEngine.SharedInternalsModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.SharedInternalsModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.SpriteMaskModule">
-        <HintPath>..\lib\UnityEngine.SpriteMaskModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.SpriteMaskModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.SpriteShapeModule">
-        <HintPath>..\lib\UnityEngine.SpriteShapeModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.SpriteShapeModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.StreamingModule">
-        <HintPath>..\lib\UnityEngine.StreamingModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.StreamingModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.SubstanceModule">
-        <HintPath>..\lib\UnityEngine.SubstanceModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.SubstanceModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.SubsystemsModule">
-        <HintPath>..\lib\UnityEngine.SubsystemsModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.SubsystemsModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.TerrainModule">
-        <HintPath>..\lib\UnityEngine.TerrainModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.TerrainModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.TerrainPhysicsModule">
-        <HintPath>..\lib\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.TerrainPhysicsModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.TextCoreFontEngineModule">
-        <HintPath>..\lib\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.TextCoreTextEngineModule">
-        <HintPath>..\lib\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.TextRenderingModule">
-        <HintPath>..\lib\UnityEngine.TextRenderingModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.TextRenderingModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.TilemapModule">
-        <HintPath>..\lib\UnityEngine.TilemapModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.TilemapModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.TLSModule">
-        <HintPath>..\lib\UnityEngine.TLSModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.TLSModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UI">
-        <HintPath>..\lib\UnityEngine.UI.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UI.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UIElementsModule">
-        <HintPath>..\lib\UnityEngine.UIElementsModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UIElementsModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UIModule">
-        <HintPath>..\lib\UnityEngine.UIModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UIModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UmbraModule">
-        <HintPath>..\lib\UnityEngine.UmbraModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UmbraModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
-        <HintPath>..\lib\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityAnalyticsModule">
-        <HintPath>..\lib\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityAnalyticsModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityConnectModule">
-        <HintPath>..\lib\UnityEngine.UnityConnectModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityConnectModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityCurlModule">
-        <HintPath>..\lib\UnityEngine.UnityCurlModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityCurlModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityTestProtocolModule">
-        <HintPath>..\lib\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityTestProtocolModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-        <HintPath>..\lib\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-        <HintPath>..\lib\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityWebRequestModule">
-        <HintPath>..\lib\UnityEngine.UnityWebRequestModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityWebRequestModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-        <HintPath>..\lib\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-        <HintPath>..\lib\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.VehiclesModule">
-        <HintPath>..\lib\UnityEngine.VehiclesModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.VehiclesModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.VFXModule">
-        <HintPath>..\lib\UnityEngine.VFXModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.VFXModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.VideoModule">
-        <HintPath>..\lib\UnityEngine.VideoModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.VideoModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.VirtualTexturingModule">
-        <HintPath>..\lib\UnityEngine.VirtualTexturingModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.VirtualTexturingModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.VRModule">
-        <HintPath>..\lib\UnityEngine.VRModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.VRModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.WindModule">
-        <HintPath>..\lib\UnityEngine.WindModule.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.WindModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.XRModule">
-        <HintPath>..\lib\UnityEngine.XRModule.dll</HintPath>
-      </Reference>
-      <Reference Include="ValueTupleBridge">
-        <HintPath>..\lib\ValueTupleBridge.dll</HintPath>
-      </Reference>
-      <Reference Include="WindowsBase">
-        <HintPath>..\lib\WindowsBase.dll</HintPath>
+        <HintPath>..\lib\unity\UnityEngine.XRModule.dll</HintPath>
       </Reference>
     </ItemGroup>
 

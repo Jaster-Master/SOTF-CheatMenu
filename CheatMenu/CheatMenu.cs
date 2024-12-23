@@ -137,7 +137,7 @@ public class CheatMenu : MelonMod
         PersonValues.DefaultRunSpeed = person._runSpeed;
         PersonValues.DefaultSwimSpeed = person._swimSpeed;
         PersonValues.DefaultStrafeSpeed = person._strafeSpeed;
-        PersonValues.DefaultCrouchSpeed = person.crouchSpeed;
+        PersonValues.DefaultCrouchSpeed = person._crouchSpeed;
         PersonValues.DefaultGravity = person.gravity;
         PersonValues.DefaultJumpMultiplier = person._jumpMultiplier;
         if (person.Stats == null) return;
@@ -246,7 +246,7 @@ public class CheatMenu : MelonMod
             person._runSpeed = PersonValues.DefaultRunSpeed * _speedMultiplier;
             person._swimSpeed = PersonValues.DefaultSwimSpeed * _speedMultiplier;
             person._strafeSpeed = PersonValues.DefaultStrafeSpeed * _speedMultiplier;
-            person.crouchSpeed = PersonValues.DefaultCrouchSpeed * _speedMultiplier;
+            person._crouchSpeed = PersonValues.DefaultCrouchSpeed * _speedMultiplier;
         }
     }
 
